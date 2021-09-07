@@ -2,17 +2,17 @@
 body {font-family: Verdana, Arial, sans-serif;
 	  background-color: #00005D;
 }
-#wrapper { background-color: #b3c7e6; 
+#wrapper { background-color: #b3c7e6;
 		   color: #000066;
 		   width: 90%;
 		   margin: auto;
 		   min-width: 450px;
 		   max-width: 1020px;
-} 
+}
 header { background-color: #869dc7;
 		 background-image: url(lighthouselogo.jpg);
 		 background-repeat: no-repeat;
-		color: #00005D; 
+		color: #00005D;
 		padding: 10px;
 }
 header h1 { padding-left: 200px;
@@ -23,38 +23,56 @@ header span { font-style: italic;
 			  color: #00005D;
 			  padding-right: 15px;
 			  text-align: right;
-			  display: block; 
-} 
+			  display: block;
+}
 nav { float: left;
 	  width: 150px;
 	  letter-spacing:0.1em;
 	  font-weight: bold;
 	   position: relative; /* for drop down menu */
-} 
+}
 
-nav ul { list-style-type: none; 
+nav ul { list-style-type: none;
 		 margin: 0;
 		 padding: 0;
 }
 nav li { border-bottom: 1px solid #ffffff;
 }
-nav a { text-decoration: none; 
+nav a { text-decoration: none;
 		display: block;
 		padding: 15px;
+		transition: background-color 2s linear;
 }
 nav a:link { color: #ffffff; }
 nav a:visited { color: #eaeaea; }
 nav a:hover {  color: #869dc7;
 			   background-color: #eaeaea;
 }
+/*Drop Down Menu */
+nav ul ul {position: absolute;
+					left: 130px;
+					top: 80px;
+					background-color: #b3c7e6;
+					padding: 0px;
+					display: none;
+					text-align: left;
+}
+nav ul ul li {border: 1px solid #00005d;
+							display: block;
+							width: 9em;
+							padding-left: 1em;
+							margin-left: 0;
+}
+nav li:hover ul {display: block;
+}
 
 main { background-color: #ffffff;
 		   color: #000000;
 		   padding: 10px 20px;
-		   overflow: auto; 
-} 
+		   overflow: auto;
+}
 
-h2 { color: #869dc7; 
+h2 { color: #869dc7;
 	 font-family: arial, sans-serif;
 	 margin: 5px;
 }
@@ -78,7 +96,7 @@ footer {font-size:70%;
 }
 
 #offer a { text-decoration: none;
-			color: #FF0000;		  
+			color: #FF0000;
 }
 #offer { background-color: #eaeaea;
 		  width: 10em;
@@ -88,13 +106,28 @@ footer {font-size:70%;
 audio {margin: auto;}
 /*Style Image Gallery  */
 #gallery{position: relative; background-color: #fff;}
-#gallery ul {width: 300px; list-style-type: none;}
-#gallery li{display: inline; float: left; padding: 10px;}
+#gallery ul {width: 300px;
+						list-style-type: none;}
+#gallery li{display: inline;
+						float: left;
+						padding: 10px;}
 #gallery img{border-style: none;}
-#gallery a {color: #eaeaea; text-decoration: none; font-style: italic;}
-#gallery span{position: absolute; left: -1000px; opacity: 0; transition: opacity 3s ease-in-out;}
-#galpic {position: absolute; left: 350px; top: 30px;}
-#gallery a:hover span {position: absolute; top: 45px; left: 370px; text-align: center; opacity: 1; color: #000;}
+#gallery a {color: #eaeaea;
+						text-decoration: none;
+						font-style: italic;}
+#gallery span{position: absolute;
+							left: -1000px;
+							opacity: 0;
+							transition: opacity 3s ease-in-out;}
+#galpic {position: absolute;
+				left: 350px;
+				top: 30px;}
+#gallery a:hover span {position: absolute;
+											top: 45px;
+											left: 370px;
+											text-align: center;
+											opacity: 1;
+											color: #000;}
 
 
 
@@ -102,27 +135,27 @@ audio {margin: auto;}
 header, main, nav, footer, figure, figcaption { display: block; }
 @media only screen and (max-width: 1024px) {
 	body { margin: 0; background-color: #869dc7;}
-	#wrapper { width: auto; margin: 0;}                                                              
+	#wrapper { width: auto; margin: 0;}
 	main { margin-left: 0; }
-	nav { float: none; 
+	nav { float: none;
 		  width: auto; }
-	nav li { display: inline-block; 
+	nav li { display: inline-block;
 			   padding: 0.5em; }
 	nav ul { text-align: center; }
 	nav a { border-style: none; }
 	h1, h2 { font-size: 120%; }
 	p { font-size: 90%; }
-} 
-@media only screen and (max-width: 768px) { 
+}
+@media only screen and (max-width: 768px) {
 	#wrapper { min-width: 0; }
 	header { background-image: url(lighthousemini.jpg); }
 	header h1 { padding-left: 0; }
 	h1, h2 { font-size: 100%; }
-	span { font-size: 80%; } 
+	span { font-size: 80%; }
 	figure { display: none;}
 	nav, nav ul, nav li { padding: 0; }
 	nav li { display: block; }
-	nav a { display: block; 
+	nav a { display: block;
 		padding: 0.5em 0;
 		border-bottom: 2px ridge #00005D; }
 	}
